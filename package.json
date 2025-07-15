@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "vercel-build": "bash vercel-build.sh"
   },
@@ -49,5 +49,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "globals": {
+      'ts-jest': {
+        tsconfig: '<rootDir>/growshop-app/tsconfig.json',
+      },
+    },
+    "roots": ['<rootDir>/growshop-app/src'],
   }
 }
