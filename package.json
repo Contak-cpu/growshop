@@ -52,10 +52,10 @@
   },
   "jest": {
     "globals": {
-      'ts-jest': {
-        tsconfig: '<rootDir>/growshop-app/tsconfig.json',
-      },
+      "ts-jest": {
+        "tsconfig": "<rootDir>/growshop-app/tsconfig.json"
+      }
     },
-    "roots": ['<rootDir>/growshop-app/src'],
+    "roots": ["<rootDir>/growshop-app/src"]
   }
 }
