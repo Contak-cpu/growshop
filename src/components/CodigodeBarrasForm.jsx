@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Box, Typography, Slide } from '@mui/material';
 import { useZxing } from 'react-zxing';
+import { DecodeHintType, BarcodeFormat } from '@zxing/library';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -39,10 +40,7 @@ const CodigodeBarrasForm = ({
     onDecodeError: () => {},
     onError: () => setError('No se pudo acceder a la cámara o hubo un error.'),
     hints: new Map([
-      [
-        2, // BarcodeFormat.EAN_13
-        true
-      ]
+      [DecodeHintType.POSSIBLE_FORMATS, [BarcodeFormat.EAN_13]]
     ]),
     constraints: { facingMode },
   });
